@@ -1,8 +1,8 @@
 import {Router} from 'express';
 import jwt from 'jsonwebtoken';
-import {JWT_SECRET} from '../config';
-import {User} from '../model';
-import userMiddleware from '../middleware/user';
+import {JWT_SECRET} from '../config.js';
+import {User} from '../model/userSchema.js';
+import userMiddleware from '../middleware/userMiddleware.js';
 
 const router = Router();
 
@@ -66,4 +66,4 @@ router.get('/profile', userMiddleware, async(req, res) => {
     }
 });
 
-export default router;
+export default userRouter;

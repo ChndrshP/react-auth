@@ -1,5 +1,6 @@
-import {JWT_SECRET} from '../config';
+import {JWT_SECRET} from '../config.js';
 import jwt from 'jsonwebtoken';
+import {User} from '../model/userSchema.js';
 
 function userMiddleware(req, res, next){
     const token = req.headers.authorization;
