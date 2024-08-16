@@ -1,5 +1,6 @@
-import {JWT_SECRET} from '../config';
+import { JWT_SECRET } from '../config.js';
 import jwt from 'jsonwebtoken'
+
 
 function adminMiddleware(req, res, next){
     const token = req.headers.authorization;
