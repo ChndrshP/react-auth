@@ -1,9 +1,10 @@
-const { Router } = require("express");
-//const adminMiddleware = require("../middlewares/adminMiddle");
-const { Admin } = require("../model/schema");
-const {JWT_SECRET} = require("../config");
+import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../config.js";
+import { Admin } from "../model/schema.js";
+import { Router } from "express";
+
+// Initilize express router
 const router = Router();
-const jwt = require("jsonwebtoken");
 
 // Admin Routes
 router.post('/signup', async (req, res) => {
@@ -47,5 +48,4 @@ router.post('/signin', async (req, res) => {
 
 });
 
-
-module.exports = router;
+export default router;

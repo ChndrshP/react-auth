@@ -1,9 +1,11 @@
-const { Router } = require("express");
+import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../config.js";
+import { User } from "../model/schema.js";
+import { Router } from "express";
+
+// Initilize express router
 const router = Router();
-//const userMiddleware = require("../middlewares/userMiddle");
-const { User} = require("../model/schema");
-const { JWT_SECRET } = require("../config");
-const jwt = require("jsonwebtoken")
+
 
 // User Routes
 router.post('/signup', async(req, res) => {
@@ -44,4 +46,4 @@ router.post('/signin', async(req, res) => {
     }
 });
 
-module.exports = router
+export default router;

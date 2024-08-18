@@ -1,5 +1,5 @@
-const jwt = require("jsonwebtoken")
-const {JWT_SECRET} = require("../config.js")
+import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../config.js";
 
 // Middleware for handling auth
 function adminMiddleware(req, res, next) {
@@ -22,4 +22,4 @@ function adminMiddleware(req, res, next) {
     }  
 }
 
-module.exports = adminMiddleware;
+export default adminMiddleware;

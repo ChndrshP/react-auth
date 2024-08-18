@@ -1,5 +1,5 @@
-const {JWT_SECRET} = require("../config")
-const jwt = require("jsonwebtoken");
+import jwt from "jsonwebtoken";
+import { JWT_SECRET } from "../config.js";
 
 function userMiddleware(req, res, next) {
     const token = req.headers.authorization;
@@ -36,4 +36,4 @@ function userMiddleware(req, res, next) {
     }
 }
 
-module.exports = userMiddleware;
+export default userMiddleware;

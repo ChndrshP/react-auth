@@ -1,3 +1,1 @@
-module.exports = {
-    JWT_SECRET: "chndrsh_server"
-}
+export const JWT_SECRET = "chndrsh_server";
