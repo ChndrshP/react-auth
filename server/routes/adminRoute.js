@@ -14,14 +14,15 @@ router.post('/signup', async (req, res) => {
 
     await Admin.create({
         username: username,
-        password: password
+        password: password,
+        isAdmin: true
     })
     res.json({
         message: "Admin created successfully"
     })
 });
 
-router.post('/signin', async (req, res) => {
+router.post('/login', async (req, res) => {
     // Implement admin signup logic
     const username = req.body.username;
     const password = req.body.password;
